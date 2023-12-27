@@ -1,0 +1,54 @@
+[
+  {
+    "questionType": "choice",
+    "title": "最高的山是什么？",
+    "tag": "数量关系",
+    "choices": ["理塘", "珠穆朗玛峰", "喜马拉雅山", "泰山"],
+    "correctAnswer": "A",
+    "score": 5
+  },
+  {
+    "questionType": "text",
+    "title": "中国现在的情况",
+    "tag": "判断推理",
+    "correctAnswer": "正在发展",
+    "score": 5
+  },
+  {
+    "questionType": "choice",
+    "title": "喜欢吃什么",
+    "tag": "判断推理",
+    "choices": ["西瓜", "火龙果", "香蕉", "菠萝"],
+    "correctAnswer": "A",
+    "score": 5
+  },
+  {
+    "questionType": "text",
+    "title": "说说喜欢的蔬菜",
+    "tag": "常识判断",
+    "correctAnswer": "青菜",
+    "score": 5
+  },
+  {
+    "questionType": "choice",
+    "title": "说下最热的季节",
+    "tag": "资料分析",
+    "choices": ["春", "夏", "秋", "冬"],
+    "correctAnswer": "B",
+    "score": 5
+  },
+  {
+    "questionType": "text",
+    "title": "描述一下音乐",
+    "tag": "判断推理",
+    "correctAnswer": "喜欢很重要",
+    "score": 3
+  },
+  {
+    "questionType": "text",
+    "title": "描述一下美术",
+    "tag": "常识判断",
+    "correctAnswer": "喜欢很重要",
+    "score": 3
+  }
+]

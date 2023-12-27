@@ -1,0 +1,75 @@
+[
+  {
+    "title": "2021期末试卷",
+    "area": "申论",
+    "tag": "综合能力测试",
+    "questions": [
+      {
+        "questionType": "choice",
+        "title": "最高的山是什么？",
+        "tag": "数量关系",
+        "choices": ["理塘", "珠穆朗玛峰", "喜马拉雅山", "泰山"],
+        "correctAnswer": "A",
+        "score": 5
+      },
+      {
+        "questionType": "text",
+        "title": "中国现在的情况",
+        "tag": "判断推理",
+        "correctAnswer": "正在发展",
+        "score": 5
+      }
+    ]
+  },
+  {
+    "title": "2021期末试卷",
+    "area": "行政测试",
+    "tag": "数量关系",
+    "questions": [
+      {
+        "questionType": "choice",
+        "title": "喜欢吃什么",
+        "tag": "判断推理",
+        "choices": ["西瓜", "火龙果", "香蕉", "菠萝"],
+        "correctAnswer": "A",
+        "score": 5
+      },
+      {
+        "questionType": "text",
+        "title": "说说喜欢的蔬菜",
+        "tag": "常识判断",
+        "correctAnswer": "青菜",
+        "score": 5
+      }
+    ]
+  },
+  {
+    "title": "2022期末试卷",
+    "area": "行政测试",
+    "tag": "分类训练-判断推理",
+    "questions": [
+      {
+        "questionType": "choice",
+        "title": "说下最热的季节",
+        "tag": "判断推理",
+        "choices": ["春", "夏", "秋", "冬"],
+        "correctAnswer": "B",
+        "score": 5
+      },
+      {
+        "questionType": "text",
+        "title": "描述一下音乐",
+        "tag": "判断推理",
+        "correctAnswer": "喜欢很重要",
+        "score": 3
+      },
+      {
+        "questionType": "text",
+        "title": "描述一下美术",
+        "tag": "判断推理",
+        "correctAnswer": "喜欢很重要",
+        "score": 3
+      }
+    ]
+  }
+]

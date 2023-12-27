@@ -1,6 +1,7 @@
 const testType = require("../db/testType");
 const paper = require("../db/paper");
 const answer = require("../db/answer");
+const question = require("../db/question");
 const mongoose = require("mongoose");
 
 async function getTestType(req, res) {
@@ -11,6 +12,12 @@ async function getTestType(req, res) {
 async function getPaper(req, res) {
   const queryContent = req.query;
   const findRes = await paper.findPaper(queryContent);
+  res.json(findRes);
+}
+
+async function getPaperById(req, res) {
+  const id = req.query.id;
+  const findRes = await paper.findPaperById(id);
   res.json(findRes);
 }
 
@@ -74,6 +81,38 @@ async function insertAnswerAndCheck(req, res) {
   });
 }
 
+async function getQuestion(req, res) {
+  const queryContent = req.query;
+  const findRes = await question.findQuestion(queryContent);
+  res.json(findRes);
+}
+
+async function getQuestionById(req, res) {
+  const id = req.query.id;
+  const findRes = await question.findQuestionById(id);
+  console.log(id);
+  res.json(findRes);
+}
+
+async function insertQuestion(req, res) {
+  const { questionType, title, tag, choices, correctAnswer, score } = req.body;
+  await question.insertQuestion(
+    questionType,
+    title,
+    tag,
+    choices,
+    correctAnswer,
+    score
+  );
+  res.send("保存成功");
+}
+
+async function deleteQuestionById(req, res) {
+  const { id } = req.body;
+  await question.deleteQuestionById(id);
+  res.send("数据库中已不存在该份答案");
+}
+
 module.exports = {
   getTestType,
   getPaper,
@@ -83,4 +122,9 @@ module.exports = {
   getAnswer,
   deleteAnswer,
   insertAnswerAndCheck,
+  getQuestion,
+  getQuestionById,
+  insertQuestion,
+  deleteQuestionById,
+  getPaperById,
 };

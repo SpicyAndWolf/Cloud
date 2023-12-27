@@ -1,0 +1,7 @@
+db.createUser({
+    user:"tsAdmin",
+    pwd:"233",
+    roles:[
+        {role:"readWrite",db:"TestSystemDB"}
+    ]
+})

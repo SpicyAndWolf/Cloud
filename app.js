@@ -25,7 +25,6 @@ app.use(express.json());
   await db.connectDatabase();
 })();
 
-
 //配置express-JVM解析用中间件
 app.use(
   expressJWT({ secret: config.jwtSecretKey }).unless({

@@ -1,20 +1,13 @@
 const mongoose = require("mongoose");
+const question = require("./question");
 const collectionName = "papers";
 
 // 创建 schema
-const questionSchema = new mongoose.Schema({
-  type: String,
-  title: String,
-  choices: [String],
-  correctAnswer: String,
-  score: Number,
-});
-
 const schema = new mongoose.Schema({
   title: String,
   area: String,
   tag: String,
-  questions: [questionSchema],
+  questions: [question.schema],
 });
 
 // 创建 model

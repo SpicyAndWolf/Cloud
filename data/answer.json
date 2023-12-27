@@ -1,0 +1,48 @@
+[
+  {
+    "paperID": "658700b6ab2dce518b4be86a",
+    "userID": "111",
+    "answers": [
+      {
+        "answerType": "choice",
+        "content": "A"
+      },
+      {
+        "answerType": "text",
+        "content": "中国正在发展"
+      },
+      {
+        "answerType": "text",
+        "content": "新闻"
+      }
+    ]
+  },
+  {
+    "paperID": "658700b6ab2dce518b4be86b",
+    "userID": "222",
+    "answers": [
+      {
+        "answerType": "choice",
+        "content": "B"
+      },
+      {
+        "answerType": "text",
+        "content": "中国正在发展"
+      }
+    ]
+  },
+  {
+    "paperID": "658700b6ab2dce518b4be86c",
+    "userID": "333",
+    "answers": [
+      {
+        "answerType": "choice",
+        "content": "C"
+      },
+      {
+        "answerType": "text",
+        "content": "中国正在发展"
+      }
+    ]
+  }
+]
