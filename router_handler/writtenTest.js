@@ -44,7 +44,7 @@ async function getRandomPaper(req, res) {
   console.log(arrLength);
   console.log(randNum);
 
-  res.send(paperArr[randNum]._id);
+  res.json(paperArr[randNum]);
 }
 
 async function insertAnswer(req, res) {
