@@ -37,6 +37,16 @@ async function deletePaper(req, res) {
   res.send("删除成功");
 }
 
+async function getRandomPaper(req, res) {
+  const paperArr = await paper.findPaper({});
+  let arrLength = paperArr.length;
+  let randNum = parseInt(Math.random() * arrLength);
+  console.log(arrLength);
+  console.log(randNum);
+
+  res.send(paperArr[randNum]._id);
+}
+
 async function insertAnswer(req, res) {
   const { paperID, userID, score, answers } = req.body;
   await answer.insertAnswer(paperID, userID, score, answers);
@@ -58,10 +68,8 @@ async function deleteAnswer(req, res) {
 async function insertAnswerAndCheck(req, res) {
   const { paperID, userID, answers } = req.body;
   let score = 0;
-  console.log(paperID);
   const paperRes = await paper.findPaperById(paperID);
   const questions = paperRes.questions;
-  console.log(questions);
 
   //开始核对选择题答案
   for (let i = 0; i < questions.length; i++) {
@@ -75,7 +83,7 @@ async function insertAnswerAndCheck(req, res) {
 
   //插入answer
   await answer.insertAnswer(paperID, userID, score, answers);
-  res.send({
+  res.json({
     score: score,
     answers: answers,
   });
@@ -127,4 +135,5 @@ module.exports = {
   insertQuestion,
   deleteQuestionById,
   getPaperById,
+  getRandomPaper,
 };
