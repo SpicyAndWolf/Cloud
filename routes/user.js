@@ -9,6 +9,7 @@ router.post("/api/register", user_handler.register);
 router.post("/api/login", user_handler.login);
 router.post("/admin/updateName", user_handler.updateName);
 router.post("/admin/updatePassword", user_handler.updatePassword);
+router.post("/admin/userinfo",user_handler.getUserInfo)
 
 module.exports = router;
 //共享路由对象

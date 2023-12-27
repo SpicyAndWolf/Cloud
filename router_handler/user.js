@@ -78,6 +78,16 @@ async function updatePassword(req, res) {
   res.send({ status: 0, message: "修改用户名成功" });
 }
 
+//根据JWT返回用户信息
+async function getUserInfo(req,res){
+  console.log(req.user)
+  const id=req.user.id;
+  const email=req.user.email;
+  const name=req.user.name;
+  const role=req.user.role_id
+  res.send({status:0,message:"0",data:{id,email,name,role}})
+}
+
 //暴露接口
 module.exports = {
   register,
@@ -85,4 +95,5 @@ module.exports = {
   // testJWT,
   updateName,
   updatePassword,
+  getUserInfo
 };

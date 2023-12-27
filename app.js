@@ -25,14 +25,13 @@ app.use(express.json());
   await db.connectDatabase();
 })();
 
-console.log(config.jwtSecretKey);
 
-// //配置express-JVM解析用中间件
-// app.use(
-//   expressJWT({ secret: config.jwtSecretKey }).unless({
-//     path: ["/api/register", "/api/login"],
-//   })
-// );
+//配置express-JVM解析用中间件
+app.use(
+  expressJWT({ secret: config.jwtSecretKey }).unless({
+    path: ["/api/register", "/api/login"],
+  })
+);
 
 //导入路由模块
 app.use("/writtenTest", writtenTestRouter);
