@@ -32,7 +32,7 @@
   {
     "questionType": "choice",
     "title": "说下最热的季节",
-    "tag": "资料分析",
+    "tag": "判断推理",
     "choices": ["春", "夏", "秋", "冬"],
     "correctAnswer": "B",
     "score": 5
@@ -47,8 +47,59 @@
   {
     "questionType": "text",
     "title": "描述一下美术",
-    "tag": "常识判断",
+    "tag": "判断推理",
     "correctAnswer": "喜欢很重要",
+    "score": 3
+  },
+  {
+    "questionType": "text",
+    "title": "小明买笔，他喜欢什么颜色的笔？",
+    "tag": "判断推理",
+    "correctAnswer": "喜欢很重要",
+    "score": 3
+  },
+  {
+    "questionType": "choice",
+    "title": "说下你喜欢的水果",
+    "tag": "常识判断",
+    "choices": ["苹果", "香蕉", "梨", "哈密瓜"],
+    "correctAnswer": "B",
+    "score": 3
+  },
+  {
+    "questionType": "choice",
+    "title": "想要游泳应该买什么",
+    "tag": "常识判断",
+    "choices": ["泳衣", "锐刻", "雨伞", "眼镜"],
+    "correctAnswer": "B",
+    "score": 3
+  },
+  {
+    "questionType": "text",
+    "title": "1和2哪个大一点",
+    "tag": "数量关系",
+    "correctAnswer": "2",
+    "score": 3
+  },
+  {
+    "questionType": "text",
+    "title": "4和7哪个大一点",
+    "tag": "数量关系",
+    "correctAnswer": "7",
+    "score": 3
+  },
+  {
+    "questionType": "text",
+    "title": "根据史前记载，大家都喜欢吃棒棒糖。根据以上材料说出你的想法",
+    "tag": "资料分析",
+    "correctAnswer": "棒棒糖很好吃",
+    "score": 3
+  },
+  {
+    "questionType": "text",
+    "title": "记者调查发现大家都会在睡着的时候呼吸，根据材料说出你的判断",
+    "tag": "资料分析",
+    "correctAnswer": "人活着的时候必须呼吸",
     "score": 3
   }
 ]

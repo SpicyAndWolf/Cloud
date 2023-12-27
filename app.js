@@ -14,6 +14,14 @@ expressWs(app);
 
 //配置cors,应对跨域
 app.use(cors());
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  next();
+});
+
+//初始生成的，可能用不到
 app.use(express.static(path.join(__dirname, "public")));
 
 //配置解析表单数据的中间件,即x-www-form和json
