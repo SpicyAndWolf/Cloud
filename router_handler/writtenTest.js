@@ -37,6 +37,48 @@ async function deletePaper(req, res) {
   res.send("删除成功");
 }
 
+async function getPaperByQsTag(req, res) {
+  //首先看看数据库内部有没有相关试卷
+  const queryContent = req.query;
+  const findRes = await paper.findPaper(queryContent);
+  if (findRes.length != 0) {
+    res.json(findRes);
+  } else {
+    //创建一个试卷，需要有tag、area
+    createPaper(req.query);
+
+    //再次查询
+    secondQuery = req.query;
+    const secondFindRes = await paper.findPaper(secondQuery);
+    res.json(secondFindRes);
+  }
+}
+
+async function createPaper(reqQuery) {
+  const { area, tag } = reqQuery;
+  const questionArr = await question.findQuestion({ tag: tag });
+  let arrLength = questionArr.length;
+  let tempArr = []; //存储随机数，防止试题重复
+  let questionArrToSend = []; //存储将要向前端推送的题目
+  let MaxSize = 10; //试卷最多存储多少题
+
+  //选择将要向前端推送的试题
+  if (MaxSize < arrLength / 2) {
+    for (let i = 0; i < MaxSize; i++) {
+      let randNum = parseInt(Math.random() * arrLength);
+      if (tempArr.indexOf(randNum) === -1) {
+        tempArr.push(randNum);
+        questionArrToSend.push(questionArr[randNum]);
+      } else i--;
+    }
+  } else {
+    questionArrToSend = questionArr;
+  }
+
+  //生成一个试卷
+  await paper.insertPaper(`分类测试： ${tag}`, area, tag, questionArrToSend);
+}
+
 async function getRandomPaper(req, res) {
   const paperArr = await paper.findPaper({});
   let arrLength = paperArr.length;
@@ -136,4 +178,6 @@ module.exports = {
   deleteQuestionById,
   getPaperById,
   getRandomPaper,
+  createPaper,
+  getPaperByQsTag,
 };

@@ -7,6 +7,7 @@ router.get("/testType/get", writtenTest_handler.getTestType);
 router.get("/Paper/get", writtenTest_handler.getPaper);
 router.get("/Paper/getById", writtenTest_handler.getPaperById);
 router.get("/Paper/getRandomId", writtenTest_handler.getRandomPaper);
+router.get("/Paper/getByQsTag", writtenTest_handler.getPaperByQsTag);
 router.post("/Paper/insert", writtenTest_handler.insertPaper);
 router.post("/Paper/delete", writtenTest_handler.deletePaper);
 router.post("/Answer/insert", writtenTest_handler.insertAnswer);
