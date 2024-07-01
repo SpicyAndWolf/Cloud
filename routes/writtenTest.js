@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const writtenTest_handler = require("../router_handler/writtenTest");
 
-//获取测试种类
+//routers
 router.get("/testType/get", writtenTest_handler.getTestType);
 router.get("/Paper/get", writtenTest_handler.getPaper);
 router.get("/Paper/getById", writtenTest_handler.getPaperById);

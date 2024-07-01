@@ -5,3 +5,11 @@ db.createUser({
         {role:"readWrite",db:"TestSystemDB"}
     ]
 })
+
+db.createUser({
+    user:"blogAdmin",
+    pwd:"spicy135",
+    roles:[
+        {role:"readWrite",db:"Blog"}
+    ]
+})
